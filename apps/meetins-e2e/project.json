@@ -1,0 +1,28 @@
+{
+  "root": "apps/meetins-e2e",
+  "sourceRoot": "apps/meetins-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/meetins-e2e/cypress.json",
+        "devServerTarget": "meetins:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "meetins:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/meetins-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["meetins"]
+}
