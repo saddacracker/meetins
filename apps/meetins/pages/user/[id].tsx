@@ -17,7 +17,7 @@ const fetcher = async (url: string) => {
     return data;
 };
 
-const User = () => {
+const UserPage = () => {
     const router = useRouter();
     const { id, ...stuff } = router.query; // gets id and query params 
     const result = useSWR(`/api/user/${id}`, fetcher);
@@ -56,4 +56,4 @@ const User = () => {
     )
 };
 
-export default User;
+export default UserPage;
