@@ -5,15 +5,15 @@ console.log('process.env', process.env);
 console.log('--------------------------------');
 
 // @ts-ignore
-export default initAuth0({
-    clientId: process.env.AUTH0_CLIENT_ID,
-    clientSecret: process.env.AUTH0_CLIENT_SECRET,
-    scope: process.env.AUTH0_SCOPE,
-    domain: process.env.AUTH0_DOMAIN,
-    redirectUri: process.env.REDIRECT_URI,
-    postLogoutRedirectUri: process.env.POST_LOGOUT_REDIRECT_URI,
-    session: {
-      // @ts-ignore
-      cookieSecret: process.env.SESSION_COOKIE_SECRET,
-    },
-});
+// export default initAuth0({
+//     clientId: process.env.AUTH0_CLIENT_ID,
+//     clientSecret: process.env.AUTH0_CLIENT_SECRET,
+//     scope: process.env.AUTH0_SCOPE,
+//     domain: process.env.AUTH0_DOMAIN,
+//     redirectUri: process.env.REDIRECT_URI,
+//     postLogoutRedirectUri: process.env.POST_LOGOUT_REDIRECT_URI,
+//     session: {
+//       // @ts-ignore
+//       cookieSecret: process.env.SESSION_COOKIE_SECRET,
+//     },
+// });

@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { UserProvider } from '@auth0/nextjs-auth0';
 import Head from 'next/head';
 import './styles.css';
 
@@ -9,7 +10,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to meetins!</title>
       </Head>
       <main className="app">
-        <Component {...pageProps} />
+        <UserProvider>
+          <Component {...pageProps} />
+        </UserProvider>
       </main>
     </>
   );
