@@ -10,11 +10,10 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-
-const UsersPage: NextPage = ({data}) => {
+// @ts-ignore
+const UsersPage: NextPage = ({data}) => { 
     
-    console.log('data', data);
-    
+    console.log('data', data); 
     
     if (!data) {
       return <ErrorPage statusCode={404} />;

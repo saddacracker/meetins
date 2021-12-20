@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "types": [
@@ -22,7 +23,7 @@
     "**/*.js",
     "**/*.jsx",
     "next-env.d.ts"
-  ],
+, "../next.config.js"  ],
   "exclude": [
     "node_modules"
   ]

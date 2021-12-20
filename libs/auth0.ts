@@ -1,5 +1,10 @@
 import { initAuth0 } from "@auth0/nextjs-auth0";
 
+console.log('--------------------------------');
+console.log('process.env', process.env);
+console.log('--------------------------------');
+
+// @ts-ignore
 export default initAuth0({
     clientId: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
@@ -8,6 +13,7 @@ export default initAuth0({
     redirectUri: process.env.REDIRECT_URI,
     postLogoutRedirectUri: process.env.POST_LOGOUT_REDIRECT_URI,
     session: {
+      // @ts-ignore
       cookieSecret: process.env.SESSION_COOKIE_SECRET,
     },
 });
