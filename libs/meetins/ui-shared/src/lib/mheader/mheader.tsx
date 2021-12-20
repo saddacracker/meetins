@@ -7,7 +7,7 @@ export interface MHeaderProps {
 
 export const MHeader = (props: MHeaderProps) => {
     return (
-        <Typography component="h1" variant="h2">
+        <Typography component="h1" variant="h3">
             {props.title}
         </Typography>
     )
