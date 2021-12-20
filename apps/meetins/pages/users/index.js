@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import fetch from "node-fetch";
+import { useUser } from '@auth0/nextjs-auth0';
 import ErrorPage from "next/error";
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { MHeader, MUserListItem } from '@meetins/meetins/ui-shared';
 
 const UsersPage = ({data}) => { 
+    const { user, error, isLoading } = useUser();
+
+    if (isLoading) return <div>Loading...</div>;
+    
+    if (error) return <div>{error.message}</div>;
         
     if (!data) {
       return <ErrorPage statusCode={404} />;
@@ -18,21 +24,27 @@ const UsersPage = ({data}) => {
                 Go to Home page
             </Link>
 
-            <List style={{ width: '100%', maxWidth: 420 }}>
-                { data.map( (item, i) => {
-                    return (
-                        <div key={item.id} >
-                            <MUserListItem 
-                                id={item.id}
-                                name={item.name}
-                                email={item.email}
-                            />
-                            <Divider variant="inset" component="li" />
-                        </div>
-                    )
-                })}
+            {user && 
+                <List style={{ width: '100%', maxWidth: 420 }}>
+                    { data.map( (item, i) => {
+                        return (
+                            <div key={item.id} >
+                                <MUserListItem 
+                                    id={item.id}
+                                    name={item.name}
+                                    email={item.email}
+                                />
+                                <Divider variant="inset" component="li" />
+                            </div>
+                        )
+                    })}
+                </List>
+            }
 
-            </List>
+            {!user && 
+                <a href="/api/auth/login">Login</a>
+            }
+
         </>
     )
 }

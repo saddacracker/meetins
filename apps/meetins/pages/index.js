@@ -14,6 +14,8 @@ export function Index() {
   console.log('user', user);
 
   if (user) {
+    const username = user.given_name ? user.given_name : user.name;
+
     return (
       <div className={styles.page}>
         <div className="wrapper">
@@ -21,7 +23,7 @@ export function Index() {
             
             <div id="welcome">
               <h1>
-                <span> Hello there, {user.given_name}</span>
+                <span> Hello there, {username}</span>
                 Welcome to meetins 👋
               </h1>
             </div>
