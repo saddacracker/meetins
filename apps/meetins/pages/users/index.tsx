@@ -9,19 +9,18 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import { MHeader } from '@meetins/meetins/ui-shared';
 
 // @ts-ignore
 const UsersPage: NextPage = ({data}) => { 
-    
-    console.log('data', data); 
-    
+        
     if (!data) {
       return <ErrorPage statusCode={404} />;
     }
 
     return (
         <>
-            <h1>This is the Users page</h1>
+            <MHeader title="This is the Users page"/>
             <Link href="/">
                 Go to Home page
             </Link>
@@ -30,27 +29,29 @@ const UsersPage: NextPage = ({data}) => {
                 { data.map( (item, i) => {
                     return (
                         <div key={item.id} >
-                            <Link href={`user/${item.id}`}>
-                                <ListItem alignItems="flex-start">
-                                    <ListItemAvatar>
-                                        <Avatar alt={item.name} src={`/static/images/avatar/${item.id}.jpg`} />
-                                    </ListItemAvatar>
-                                    <ListItemText
-                                        primary={item.name}
-                                        secondary={
-                                        <>
-                                            <Typography
-                                                style={{ display: 'inline' }}
-                                                component="span"
-                                                variant="body2"
-                                            >
-                                                {`${item.name} - `}
-                                            </Typography>
-                                            {item.email}
-                                        </>
-                                    }
-                                    />
-                                </ListItem>
+                            <Link href={`/user/${item.id}`}>
+                                <a>
+                                    <ListItem alignItems="flex-start">
+                                        <ListItemAvatar>
+                                            <Avatar alt={item.name}/>
+                                        </ListItemAvatar>
+                                        <ListItemText
+                                            primary={item.name}
+                                            secondary={
+                                            <>
+                                                <Typography
+                                                    style={{ display: 'inline' }}
+                                                    component="span"
+                                                    variant="body2"
+                                                >
+                                                    {`${item.name} - `}
+                                                </Typography>
+                                                {item.email}
+                                            </>
+                                        }
+                                        />
+                                    </ListItem>
+                                </a>
                             </Link>
                             <Divider variant="inset" component="li" />
                         </div>

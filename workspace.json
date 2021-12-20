@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "meetins": "apps/meetins",
-    "meetins-e2e": "apps/meetins-e2e"
+    "meetins-e2e": "apps/meetins-e2e",
+    "meetins-ui-shared": "libs/meetins/ui-shared"
   }
 }

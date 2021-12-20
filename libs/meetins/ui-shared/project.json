@@ -1,0 +1,23 @@
+{
+  "root": "libs/meetins/ui-shared",
+  "sourceRoot": "libs/meetins/ui-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/meetins/ui-shared/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/meetins/ui-shared"],
+      "options": {
+        "jestConfig": "libs/meetins/ui-shared/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
