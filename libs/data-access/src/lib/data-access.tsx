@@ -1,4 +1,4 @@
-import './data-access.module.css';
+// import './data-access.module.css';
 
 /* eslint-disable-next-line */
 export interface DataAccessProps {}

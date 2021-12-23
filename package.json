@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
+    "@apollo/client": "^3.5.6",
     "@auth0/nextjs-auth0": "^1.6.2",
     "@emotion/react": "^11.7.1",
     "@material-ui/core": "^4.12.3",
@@ -20,7 +20,6 @@
     "@nestjs/graphql": "^9.1.2",
     "@nestjs/platform-express": "^8.0.0",
     "@nrwl/next": "13.3.6",
-    "apollo-boost": "^0.4.9",
     "apollo-server-express": "^3.5.0",
     "core-js": "^3.6.5",
     "dotenv": "^10.0.0",

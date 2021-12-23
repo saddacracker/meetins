@@ -1,4 +1,4 @@
-import './feature-sets.module.css';
+// import './feature-sets.module.css';
 
 /* eslint-disable-next-line */
 export interface FeatureSetsProps {}
