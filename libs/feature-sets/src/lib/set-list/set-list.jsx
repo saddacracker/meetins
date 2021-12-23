@@ -1,7 +1,3 @@
-
-import React from 'react';
-
-// import './set-list.css';
 import { useSetListQuery } from '@meetins/data-access';
 
 

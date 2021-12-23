@@ -22,9 +22,17 @@ export type Mutation = {
 
 
 export type MutationAddSetArgs = {
+  address?: InputMaybe<Scalars['String']>;
+  city?: InputMaybe<Scalars['String']>;
+  country?: InputMaybe<Scalars['String']>;
+  day?: InputMaybe<Scalars['String']>;
+  end_time?: InputMaybe<Scalars['String']>;
+  group?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
-  numParts?: InputMaybe<Scalars['Int']>;
-  year?: InputMaybe<Scalars['String']>;
+  postal_code?: InputMaybe<Scalars['String']>;
+  state?: InputMaybe<Scalars['String']>;
+  time?: InputMaybe<Scalars['String']>;
+  updated?: InputMaybe<Scalars['String']>;
 };
 
 export type Query = {
@@ -34,25 +42,46 @@ export type Query = {
 
 export type Set = {
   __typename?: 'Set';
+  address?: Maybe<Scalars['String']>;
+  approximate?: Maybe<Scalars['Boolean']>;
+  city?: Maybe<Scalars['String']>;
+  country?: Maybe<Scalars['String']>;
+  day?: Maybe<Scalars['Int']>;
+  end_time?: Maybe<Scalars['String']>;
+  group?: Maybe<Scalars['String']>;
   id: Scalars['Int'];
   name?: Maybe<Scalars['String']>;
-  numParts?: Maybe<Scalars['Int']>;
-  year?: Maybe<Scalars['Int']>;
+  notes?: Maybe<Scalars['String']>;
+  postal_code?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  state?: Maybe<Scalars['String']>;
+  time?: Maybe<Scalars['String']>;
+  types?: Maybe<Array<Maybe<Scalars['String']>>>;
+  updated?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
 };
 
 export type SetListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type SetListQuery = { __typename?: 'Query', allSets?: Array<{ __typename?: 'Set', id: number, name?: string | null | undefined, numParts?: number | null | undefined, year?: number | null | undefined } | null | undefined> | null | undefined };
+export type SetListQuery = { __typename?: 'Query', allSets?: Array<{ __typename?: 'Set', id: number, name?: string | null | undefined, day?: number | null | undefined, slug?: string | null | undefined, time?: string | null | undefined, end_time?: string | null | undefined, group?: string | null | undefined, updated?: string | null | undefined, address?: string | null | undefined, city?: string | null | undefined, state?: string | null | undefined, postal_code?: string | null | undefined, country?: string | null | undefined } | null | undefined> | null | undefined };
 
 export type AddSetMutationVariables = Exact<{
   name: Scalars['String'];
-  year: Scalars['String'];
-  numParts: Scalars['Int'];
+  day: Scalars['String'];
+  time: Scalars['String'];
+  end_time: Scalars['String'];
+  group: Scalars['String'];
+  updated: Scalars['String'];
+  address: Scalars['String'];
+  city: Scalars['String'];
+  state: Scalars['String'];
+  postal_code: Scalars['String'];
+  country?: InputMaybe<Scalars['String']>;
 }>;
 
 
-export type AddSetMutation = { __typename?: 'Mutation', addSet?: { __typename?: 'Set', id: number, name?: string | null | undefined, numParts?: number | null | undefined, year?: number | null | undefined } | null | undefined };
+export type AddSetMutation = { __typename?: 'Mutation', addSet?: { __typename?: 'Set', name?: string | null | undefined, day?: number | null | undefined, slug?: string | null | undefined, time?: string | null | undefined, end_time?: string | null | undefined, group?: string | null | undefined, updated?: string | null | undefined, address?: string | null | undefined, city?: string | null | undefined, state?: string | null | undefined, postal_code?: string | null | undefined, country?: string | null | undefined } | null | undefined };
 
 
 export const SetListDocument = gql`
@@ -60,8 +89,17 @@ export const SetListDocument = gql`
   allSets {
     id
     name
-    numParts
-    year
+    day
+    slug
+    time
+    end_time
+    group
+    updated
+    address
+    city
+    state
+    postal_code
+    country
   }
 }
     `;
@@ -93,12 +131,32 @@ export type SetListQueryHookResult = ReturnType<typeof useSetListQuery>;
 export type SetListLazyQueryHookResult = ReturnType<typeof useSetListLazyQuery>;
 export type SetListQueryResult = Apollo.QueryResult<SetListQuery, SetListQueryVariables>;
 export const AddSetDocument = gql`
-    mutation addSet($name: String!, $year: String!, $numParts: Int!) {
-  addSet(name: $name, year: $year, numParts: $numParts) {
-    id
+    mutation addSet($name: String!, $day: String!, $time: String!, $end_time: String!, $group: String!, $updated: String!, $address: String!, $city: String!, $state: String!, $postal_code: String!, $country: String) {
+  addSet(
+    name: $name
+    day: $day
+    time: $time
+    end_time: $end_time
+    group: $group
+    updated: $updated
+    address: $address
+    city: $city
+    state: $state
+    postal_code: $postal_code
+    country: $country
+  ) {
     name
-    numParts
-    year
+    day
+    slug
+    time
+    end_time
+    group
+    updated
+    address
+    city
+    state
+    postal_code
+    country
   }
 }
     `;
@@ -118,8 +176,16 @@ export type AddSetMutationFn = Apollo.MutationFunction<AddSetMutation, AddSetMut
  * const [addSetMutation, { data, loading, error }] = useAddSetMutation({
  *   variables: {
  *      name: // value for 'name'
- *      year: // value for 'year'
- *      numParts: // value for 'numParts'
+ *      day: // value for 'day'
+ *      time: // value for 'time'
+ *      end_time: // value for 'end_time'
+ *      group: // value for 'group'
+ *      updated: // value for 'updated'
+ *      address: // value for 'address'
+ *      city: // value for 'city'
+ *      state: // value for 'state'
+ *      postal_code: // value for 'postal_code'
+ *      country: // value for 'country'
  *   },
  * });
  */

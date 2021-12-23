@@ -1,8 +1,44 @@
+# "name": "Sunday Serenity",
+# "slug": "sunday-serenity-14",
+# "day": 0,
+# "time": "18:00",
+# "end_time": "19:30",
+# "location": "Alano Club",
+# "group": "The Serenity Group",
+# "notes": "Ring buzzer. Meeting is on the 2nd floor.",
+# "updated": "2014-05-31 14:32:23",
+# "url": "https://intergroup.org/meetings/sunday-serenity",
+# "types": [
+# 	"O",
+# 	"T",
+# 	"LGBTQ"
+# ],
+# "address": "123 Main Street",
+# "city": "Anytown",
+# "state": "CA",
+# "postal_code": "98765",
+# "country": "US",
+# "approximate": "no"
+
+
 type Set {
     id: Int!
     name: String
-    year: Int
-    numParts: Int
+    day: Int
+    slug: String
+    time: String
+    end_time: String
+    group: String
+    notes: String
+    updated: String
+    url: String
+    types: [String]
+    address: String
+    city: String
+    state: String
+    postal_code: String
+    country: String
+    approximate: Boolean
 }
 
 type Query {
@@ -10,5 +46,5 @@ type Query {
 }
 
 type Mutation {
-    addSet(name: String, year: String, numParts: Int): Set
+    addSet(name: String, day: String, time: String, end_time: String, group: String, updated: String, address: String, city: String, state: String, postal_code: String, country: String): Set
 }
