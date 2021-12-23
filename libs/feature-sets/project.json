@@ -1,0 +1,23 @@
+{
+  "root": "libs/feature-sets",
+  "sourceRoot": "libs/feature-sets/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/feature-sets/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-sets"],
+      "options": {
+        "jestConfig": "libs/feature-sets/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
