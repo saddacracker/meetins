@@ -31,16 +31,23 @@ export function Index() {
             <Card>
               <CardContent>
                 <h2>Card Content</h2>
-                <div>
-                  <Link href="/about">
-                    Go to About page
-                  </Link>
-                </div>
-                <div>
-                  <Link href="/users">
-                    Go to Users page
-                  </Link>
-                </div>
+                <ul>
+                  <li>
+                    <Link href="/about">
+                      Go to About page
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/users">
+                      Go to Users page
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/meetings">
+                      Go to Meetings page
+                    </Link>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 

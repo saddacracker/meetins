@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "api": "apps/api",
+    "data-access": "libs/data-access",
+    "feature-sets": "libs/feature-sets",
     "meetins": "apps/meetins",
     "meetins-e2e": "apps/meetins-e2e",
     "meetins-ui-shared": "libs/meetins/ui-shared",

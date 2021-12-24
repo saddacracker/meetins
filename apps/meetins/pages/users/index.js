@@ -17,6 +17,8 @@ const UsersPage = ({data}) => {
       return <ErrorPage statusCode={404} />;
     }
 
+    console.log('user', user);
+
     return (
         <>
             <MHeader title="This is the Users page"/>
@@ -41,8 +43,10 @@ const UsersPage = ({data}) => {
                 </List>
             }
 
-            {!user && 
-                <a href="/api/auth/login">Login</a>
+            {user === undefined && 
+                <div>
+                    <a href="/api/auth/login">Login</a>
+                </div>
             }
 
         </>

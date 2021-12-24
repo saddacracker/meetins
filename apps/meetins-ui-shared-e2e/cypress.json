@@ -3,7 +3,7 @@
   "fixturesFolder": "./src/fixtures",
   "integrationFolder": "./src/integration",
   "modifyObstructiveCode": false,
-  "supportFile": "./src/support/index.ts",
+  "supportFile": "./src/support/index.js",
   "pluginsFile": false,
   "video": true,
   "videosFolder": "../../dist/cypress/apps/meetins-ui-shared-e2e/videos",
