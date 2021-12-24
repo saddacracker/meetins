@@ -13,7 +13,7 @@ export const SetForm = (props: SetFormProps) => {
   const [end_time, setEndTime] = useState('');
   
   const [addSetMutation, mutationResult] = useAddSetMutation({
-    variables: { id, name, day, time, end_time },
+    variables: { name, day, time, end_time },
     update(cache, { data: { addSet } }) {
       const { allSets } = cache.readQuery({ query: SetListDocument });
       cache.writeQuery({
