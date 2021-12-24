@@ -71,12 +71,12 @@ export type AddSetMutationVariables = Exact<{
   day: Scalars['Int'];
   time: Scalars['String'];
   end_time: Scalars['String'];
-  group: Scalars['String'];
-  updated: Scalars['String'];
-  address: Scalars['String'];
-  city: Scalars['String'];
-  state: Scalars['String'];
-  postal_code: Scalars['String'];
+  group?: InputMaybe<Scalars['String']>;
+  updated?: InputMaybe<Scalars['String']>;
+  address?: InputMaybe<Scalars['String']>;
+  city?: InputMaybe<Scalars['String']>;
+  state?: InputMaybe<Scalars['String']>;
+  postal_code?: InputMaybe<Scalars['String']>;
   country?: InputMaybe<Scalars['String']>;
 }>;
 
@@ -131,7 +131,7 @@ export type SetListQueryHookResult = ReturnType<typeof useSetListQuery>;
 export type SetListLazyQueryHookResult = ReturnType<typeof useSetListLazyQuery>;
 export type SetListQueryResult = Apollo.QueryResult<SetListQuery, SetListQueryVariables>;
 export const AddSetDocument = gql`
-    mutation addSet($name: String!, $day: Int!, $time: String!, $end_time: String!, $group: String!, $updated: String!, $address: String!, $city: String!, $state: String!, $postal_code: String!, $country: String) {
+    mutation addSet($name: String!, $day: Int!, $time: String!, $end_time: String!, $group: String, $updated: String, $address: String, $city: String, $state: String, $postal_code: String, $country: String) {
   addSet(
     name: $name
     day: $day

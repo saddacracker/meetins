@@ -11,7 +11,7 @@ export const SetList = (props) => {
     <ul>
       {data.allSets.map(({ id, name, day, time, end_time }) => (
         <li key={id}>
-          <strong>{name}</strong> | {day} | {time} - {end_time}
+          {id} <strong>{name}</strong> | {day} | {time} - {end_time}
         </li>
       ))}
     </ul>

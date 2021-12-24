@@ -13,7 +13,7 @@ export const SetForm = (props: SetFormProps) => {
   const [end_time, setEndTime] = useState('');
   
   const [addSetMutation, mutationResult] = useAddSetMutation({
-    variables: { name, day, time, end_time },
+    variables: { id, name, day, time, end_time },
     update(cache, { data: { addSet } }) {
       const { allSets } = cache.readQuery({ query: SetListDocument });
       cache.writeQuery({
@@ -26,6 +26,8 @@ export const SetForm = (props: SetFormProps) => {
   const handleSubmit = event => {
     event.preventDefault();
     addSetMutation();
+
+    // reset form
     setName("");
     setDay(0)
     setTime("");
@@ -47,6 +49,9 @@ export const SetForm = (props: SetFormProps) => {
         Day:{' '}
         <input
           name="day"
+          type="number"
+          max="6"
+          min="0"
           value={day}
           onChange={event => setDay(Number(event.target.value))}
         ></input>
