@@ -9,9 +9,9 @@ export const SetList = (props) => {
 
   return (
     <ul>
-      {data.allSets.map(({ id, name, numParts, year }) => (
+      {data.allSets.map(({ id, name, day, time, end_time }) => (
         <li key={id}>
-          {year} - <strong>{name}</strong> ({numParts} parts)
+          <strong>{name}</strong> | {day} | {time} - {end_time}
         </li>
       ))}
     </ul>

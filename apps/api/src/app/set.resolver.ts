@@ -37,7 +37,7 @@ export class SetResolver {
       country: "US"
     },
     {
-      id: 1,
+      id: 2,
       name: "New Life",
       day: 3,
       slug: "new-life-group",

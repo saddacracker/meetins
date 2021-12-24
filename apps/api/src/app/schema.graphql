@@ -46,5 +46,5 @@ type Query {
 }
 
 type Mutation {
-    addSet(name: String, day: String, time: String, end_time: String, group: String, updated: String, address: String, city: String, state: String, postal_code: String, country: String): Set
+    addSet(name: String, day: Int, time: String, end_time: String, group: String, updated: String, address: String, city: String, state: String, postal_code: String, country: String): Set
 }

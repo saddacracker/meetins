@@ -8,11 +8,12 @@ export interface SetFormProps {}
 
 export const SetForm = (props: SetFormProps) => {
   const [name, setName] = useState('');
-  const [year, setYear] = useState('');
-  const [numParts, setNumParts] = useState(1000);
+  const [day, setDay] = useState(0);
+  const [time, setTime] = useState('');
+  const [end_time, setEndTime] = useState('');
   
   const [addSetMutation, mutationResult] = useAddSetMutation({
-    variables: { name, year, numParts },
+    variables: { name, day, time, end_time },
     update(cache, { data: { addSet } }) {
       const { allSets } = cache.readQuery({ query: SetListDocument });
       cache.writeQuery({
@@ -26,8 +27,9 @@ export const SetForm = (props: SetFormProps) => {
     event.preventDefault();
     addSetMutation();
     setName("");
-    setYear("");
-    setNumParts(1000);
+    setDay(0)
+    setTime("");
+    setEndTime("");
   };
 
   return (
@@ -42,20 +44,29 @@ export const SetForm = (props: SetFormProps) => {
       </label>
       <br />
       <label>
-        Year:{' '}
+        Day:{' '}
         <input
-          name="year"
-          value={year}
-          onChange={event => setYear(event.target.value)}
+          name="day"
+          value={day}
+          onChange={event => setDay(Number(event.target.value))}
         ></input>
       </label>
       <br />
       <label>
-        Number of Parts:{' '}
+        Start Time:{' '}
         <input
-          name="numParts"
-          value={numParts}
-          onChange={event => setNumParts(+event.target.value)}
+          name="time"
+          value={time}
+          onChange={event => setTime(event.target.value)}
+        ></input>
+      </label>
+      <br />
+      <label>
+        End Time:{' '}
+        <input
+          name="end_time"
+          value={end_time}
+          onChange={event => setEndTime(event.target.value)}
         ></input>
       </label>
       <br />

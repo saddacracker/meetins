@@ -20,7 +20,7 @@ query setList {
 }
 
 
-mutation addSet($name: String!, $day: String!, $time: String!, $end_time: String!, $group: String!, $updated: String!, $address: String!, $city: String!, $state: String!, $postal_code: String!, $country: String) {
+mutation addSet($name: String!, $day: Int!, $time: String!, $end_time: String!, $group: String!, $updated: String!, $address: String!, $city: String!, $state: String!, $postal_code: String!, $country: String) {
   addSet(name: $name, day: $day, time: $time, end_time: $end_time, group: $group, updated: $updated, address: $address, city: $city, state: $state, postal_code: $postal_code, country: $country) {
     name
     day
