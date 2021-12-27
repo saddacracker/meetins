@@ -1,0 +1,23 @@
+{
+  "root": "libs/meetins/util-hooks",
+  "sourceRoot": "libs/meetins/util-hooks/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/meetins/util-hooks/**/*.js"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/meetins/util-hooks"],
+      "options": {
+        "jestConfig": "libs/meetins/util-hooks/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
