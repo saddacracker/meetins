@@ -1,6 +1,5 @@
 import { useSetListQuery } from '@meetins/data-access';
 
-
 export const SetList = (props) => {
   const { loading, error, data } = useSetListQuery();
 

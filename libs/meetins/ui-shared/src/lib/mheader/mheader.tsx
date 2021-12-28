@@ -1,5 +1,4 @@
 import Typography from '@material-ui/core/Typography';
-// import './mheader.module.scss';
 
 export interface MHeaderProps {
     title: string
