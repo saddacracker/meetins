@@ -7,7 +7,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/meetins/util-hooks/**/*.js"]
+        "lintFilePatterns": ["libs/meetins/util-hooks/**/*.ts"]
       }
     },
     "test": {
