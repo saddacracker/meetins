@@ -6,6 +6,7 @@ import {
 } from "@apollo/client";
 import { MHeader } from '@meetins/meetins/ui-shared';
 import styles from "../../styles/meetings.module.css";
+import headerStyles from "../../styles/meetings.mheader.scss";
 
 const client = new ApolloClient({
   uri: 'http://localhost:3333/graphql',
@@ -14,7 +15,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <MHeader title="Meetings"/>
+    <MHeader title="Meetings" styles={headerStyles.container}/>
     <div className={styles.container}>
       <SetForm />
       <SetList />
