@@ -6,7 +6,7 @@ import {
 } from "@apollo/client";
 import { MHeader } from '@meetins/meetins/ui-shared';
 import styles from "../../styles/meetings.module.css";
-import headerStyles from "../../styles/meetings.mheader.scss";
+import headerStyles from "../../styles/mheader.module.scss";
 
 const client = new ApolloClient({
   uri: 'http://localhost:3333/graphql',
