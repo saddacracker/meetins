@@ -8,6 +8,7 @@
     "meetins-e2e": "apps/meetins-e2e",
     "meetins-ui-shared": "libs/meetins/ui-shared",
     "meetins-ui-shared-e2e": "apps/meetins-ui-shared-e2e",
-    "meetins-util-hooks": "libs/meetins/util-hooks"
+    "meetins-util-hooks": "libs/meetins/util-hooks",
+    "serverless": "apps/serverless"
   }
 }
