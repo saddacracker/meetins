@@ -29,17 +29,22 @@ export class ServerlessStack extends cdk.Stack {
       }
     })
 
+    const commonLambdaProps: Omit<lambda.FunctionProps, "handler"> = {
+      code: lambda.Code.fromAsset("functions"),
+      runtime: lambda.Runtime.NODEJS_14_X,
+      memorySize: 1024,
+      architecture: lambda.Architecture.ARM_64,
+      environment: {
+        MEETINGS_TABLE: meetingsTable.tableName,
+      },
+    }
+
     ////////////////////
     // Query: All Meetings
     ////////////////////
     const listMeetingsLambda = new lambda.Function(this, "listMeetingsHandler", {
-      code: lambda.Code.fromAsset("functions"),
-      runtime: lambda.Runtime.NODEJS_14_X,
       handler: "listMeetings.handler",
-      memorySize: 1024,
-      environment: {
-        MEETINGS_TABLE: meetingsTable.tableName,
-      },
+      ...commonLambdaProps
     })
 
     meetingsTable.grantReadData(listMeetingsLambda);
@@ -59,13 +64,8 @@ export class ServerlessStack extends cdk.Stack {
     // Query: Meeting By ID
     ////////////////////
     const getMeetingByIdLambda = new lambda.Function(this, "getMeetingByIdHandler", {
-      code: lambda.Code.fromAsset("functions"),
-      runtime: lambda.Runtime.NODEJS_14_X,
       handler: "getMeetingById.handler",
-      memorySize: 1024,
-      environment: {
-        MEETINGS_TABLE: meetingsTable.tableName,
-      },
+      ...commonLambdaProps
     })
 
     meetingsTable.grantReadData(getMeetingByIdLambda);
@@ -86,12 +86,8 @@ export class ServerlessStack extends cdk.Stack {
     // Mutation
     ////////////////////
     const createMeetingLambda = new lambda.Function(this, "createMeetingHandler", {
-      code: lambda.Code.fromAsset("functions"),
-      runtime: lambda.Runtime.NODEJS_14_X,
       handler: "createMeeting.handler",
-      environment: {
-        MEETINGS_TABLE: meetingsTable.tableName,
-      },
+      ...commonLambdaProps
     });
 
     meetingsTable.grantReadWriteData(createMeetingLambda);

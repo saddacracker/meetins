@@ -57,7 +57,7 @@
             "ApiId"
           ]
         },
-        "Expires": 1672698200
+        "Expires": 1672700170
       },
       "DependsOn": [
         "MyMeetingsApiSchema44AF75E6"
@@ -492,6 +492,9 @@
             "Arn"
           ]
         },
+        "Architectures": [
+          "arm64"
+        ],
         "Environment": {
           "Variables": {
             "MEETINGS_TABLE": {
@@ -637,6 +640,9 @@
             "Arn"
           ]
         },
+        "Architectures": [
+          "arm64"
+        ],
         "Environment": {
           "Variables": {
             "MEETINGS_TABLE": {
@@ -786,6 +792,9 @@
             "Arn"
           ]
         },
+        "Architectures": [
+          "arm64"
+        ],
         "Environment": {
           "Variables": {
             "MEETINGS_TABLE": {
@@ -794,6 +803,7 @@
           }
         },
         "Handler": "createMeeting.handler",
+        "MemorySize": 1024,
         "Runtime": "nodejs14.x"
       },
       "DependsOn": [

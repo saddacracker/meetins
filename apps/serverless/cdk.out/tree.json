@@ -111,7 +111,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672698200
+                    "expires": 1672700170
                   }
                 },
                 "constructInfo": {
@@ -792,6 +792,9 @@
                         "Arn"
                       ]
                     },
+                    "architectures": [
+                      "arm64"
+                    ],
                     "environment": {
                       "variables": {
                         "MEETINGS_TABLE": {
@@ -969,42 +972,6 @@
                   "version": "1.137.0"
                 }
               },
-              "Code": {
-                "id": "Code",
-                "path": "ServerlessStack/getMeetingByIdHandler/Code",
-                "children": {
-                  "Stage": {
-                    "id": "Stage",
-                    "path": "ServerlessStack/getMeetingByIdHandler/Code/Stage",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.AssetStaging",
-                      "version": "1.137.0"
-                    }
-                  },
-                  "AssetBucket": {
-                    "id": "AssetBucket",
-                    "path": "ServerlessStack/getMeetingByIdHandler/Code/AssetBucket",
-                    "children": {
-                      "Notifications": {
-                        "id": "Notifications",
-                        "path": "ServerlessStack/getMeetingByIdHandler/Code/AssetBucket/Notifications",
-                        "constructInfo": {
-                          "fqn": "@aws-cdk/core.Construct",
-                          "version": "1.137.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-s3.BucketBase",
-                      "version": "1.137.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
-                  "version": "1.137.0"
-                }
-              },
               "Resource": {
                 "id": "Resource",
                 "path": "ServerlessStack/getMeetingByIdHandler/Resource",
@@ -1055,6 +1022,9 @@
                         "Arn"
                       ]
                     },
+                    "architectures": [
+                      "arm64"
+                    ],
                     "environment": {
                       "variables": {
                         "MEETINGS_TABLE": {
@@ -1192,42 +1162,6 @@
                   "version": "1.137.0"
                 }
               },
-              "Code": {
-                "id": "Code",
-                "path": "ServerlessStack/createMeetingHandler/Code",
-                "children": {
-                  "Stage": {
-                    "id": "Stage",
-                    "path": "ServerlessStack/createMeetingHandler/Code/Stage",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.AssetStaging",
-                      "version": "1.137.0"
-                    }
-                  },
-                  "AssetBucket": {
-                    "id": "AssetBucket",
-                    "path": "ServerlessStack/createMeetingHandler/Code/AssetBucket",
-                    "children": {
-                      "Notifications": {
-                        "id": "Notifications",
-                        "path": "ServerlessStack/createMeetingHandler/Code/AssetBucket/Notifications",
-                        "constructInfo": {
-                          "fqn": "@aws-cdk/core.Construct",
-                          "version": "1.137.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-s3.BucketBase",
-                      "version": "1.137.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
-                  "version": "1.137.0"
-                }
-              },
               "Resource": {
                 "id": "Resource",
                 "path": "ServerlessStack/createMeetingHandler/Resource",
@@ -1278,6 +1212,9 @@
                         "Arn"
                       ]
                     },
+                    "architectures": [
+                      "arm64"
+                    ],
                     "environment": {
                       "variables": {
                         "MEETINGS_TABLE": {
@@ -1286,6 +1223,7 @@
                       }
                     },
                     "handler": "createMeeting.handler",
+                    "memorySize": 1024,
                     "runtime": "nodejs14.x"
                   }
                 },
