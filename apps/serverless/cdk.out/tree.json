@@ -16,6 +16,50 @@
         "id": "ServerlessStack",
         "path": "ServerlessStack",
         "children": {
+          "MeetingsTable": {
+            "id": "MeetingsTable",
+            "path": "ServerlessStack/MeetingsTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "ServerlessStack/MeetingsTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.137.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "ServerlessStack/MeetingsTable/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.137.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.137.0"
+            }
+          },
           "MyMeetingsApi": {
             "id": "MyMeetingsApi",
             "path": "ServerlessStack/MyMeetingsApi",
@@ -47,7 +91,7 @@
                         "ApiId"
                       ]
                     },
-                    "definition": "# \"name\": \"Sunday Serenity\",\n# \"slug\": \"sunday-serenity-14\",\n# \"day\": 0,\n# \"time\": \"18:00\",\n# \"end_time\": \"19:30\",\n# \"location\": \"Alano Club\",\n# \"group\": \"The Serenity Group\",\n# \"notes\": \"Ring buzzer. Meeting is on the 2nd floor.\",\n# \"updated\": \"2014-05-31 14:32:23\",\n# \"url\": \"https://intergroup.org/meetings/sunday-serenity\",\n# \"types\": [\n# \t\"O\",\n# \t\"T\",\n# \t\"LGBTQ\"\n# ],\n# \"address\": \"123 Main Street\",\n# \"city\": \"Anytown\",\n# \"state\": \"CA\",\n# \"postal_code\": \"98765\",\n# \"country\": \"US\",\n# \"approximate\": \"no\"\n\ntype Meeting {\n    id: Int!\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings: [Meeting]\n}"
+                    "definition": "type Meeting {\n    id: ID!\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings: [Meeting]\n}"
                   }
                 },
                 "constructInfo": {
@@ -67,7 +111,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672447762
+                    "expires": 1672620021
                   }
                 },
                 "constructInfo": {
@@ -284,6 +328,63 @@
                       "fqn": "@aws-cdk/aws-iam.CfnRole",
                       "version": "1.137.0"
                     }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "ServerlessStack/listMeetingsHandler/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "ServerlessStack/listMeetingsHandler/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:ConditionCheckItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "MeetingsTable00BD45B4",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "listMeetingsHandlerServiceRoleDefaultPolicy1E42BC84",
+                            "roles": [
+                              {
+                                "Ref": "listMeetingsHandlerServiceRole7CB6CF3B"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.137.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.137.0"
+                    }
                   }
                 },
                 "constructInfo": {
@@ -335,7 +436,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741S3BucketE9B78140"
+                        "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3Bucket3B767B17"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -348,7 +449,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741S3VersionKey7364DCD9"
+                                      "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3VersionKeyAF25A0E8"
                                     }
                                   ]
                                 }
@@ -361,7 +462,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741S3VersionKey7364DCD9"
+                                      "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3VersionKeyAF25A0E8"
                                     }
                                   ]
                                 }
@@ -376,6 +477,13 @@
                         "listMeetingsHandlerServiceRole7CB6CF3B",
                         "Arn"
                       ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "BOOKS_TABLE": {
+                          "Ref": "MeetingsTable00BD45B4"
+                        }
+                      }
                     },
                     "handler": "listMeetings.handler",
                     "runtime": "nodejs14.x"
@@ -396,13 +504,13 @@
             "id": "AssetParameters",
             "path": "ServerlessStack/AssetParameters",
             "children": {
-              "4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741": {
-                "id": "4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741",
-                "path": "ServerlessStack/AssetParameters/4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741",
+              "9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8": {
+                "id": "9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8",
+                "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ServerlessStack/AssetParameters/4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741/S3Bucket",
+                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -410,7 +518,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ServerlessStack/AssetParameters/4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741/S3VersionKey",
+                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -418,7 +526,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ServerlessStack/AssetParameters/4ecfba1c16b84355f0a44de71d6f468e7255b0ae1652fdd2ddfb48c03d115741/ArtifactHash",
+                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"

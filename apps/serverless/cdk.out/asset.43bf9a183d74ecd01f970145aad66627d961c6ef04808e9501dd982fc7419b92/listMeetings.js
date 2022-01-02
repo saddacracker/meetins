@@ -8,11 +8,6 @@ exports.handler = async () => {
         {
             "id": "2def",
             "name": "New Life",
-            "day": 3
-        },
-        {
-            "id": "3ghi",
-            "name": "Bridge to Faith",
             "day": 1
         }
     ];
