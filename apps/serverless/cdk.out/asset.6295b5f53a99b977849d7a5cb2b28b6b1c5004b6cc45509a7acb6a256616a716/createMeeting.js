@@ -17,7 +17,6 @@ exports.handler = async (event, context, callback) => {
                 TableName: process.env.MEETINGS_TABLE,
                 Item: {
                     id: context.awsRequestId, 
-                    updated: new Date().toISOString(),
                     ...meeting
                 },
             })
