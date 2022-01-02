@@ -64,6 +64,55 @@
             "id": "MyMeetingsApi",
             "path": "ServerlessStack/MyMeetingsApi",
             "children": {
+              "ApiLogsRole": {
+                "id": "ApiLogsRole",
+                "path": "ServerlessStack/MyMeetingsApi/ApiLogsRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ServerlessStack/MyMeetingsApi/ApiLogsRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "appsync.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.137.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.137.0"
+                }
+              },
               "Resource": {
                 "id": "Resource",
                 "path": "ServerlessStack/MyMeetingsApi/Resource",
@@ -71,7 +120,16 @@
                   "aws:cdk:cloudformation:type": "AWS::AppSync::GraphQLApi",
                   "aws:cdk:cloudformation:props": {
                     "authenticationType": "API_KEY",
-                    "name": "my-meetings-api"
+                    "name": "my-meetings-api",
+                    "logConfig": {
+                      "cloudWatchLogsRoleArn": {
+                        "Fn::GetAtt": [
+                          "MyMeetingsApiApiLogsRole59BC4BE3",
+                          "Arn"
+                        ]
+                      },
+                      "fieldLogLevel": "ALL"
+                    }
                   }
                 },
                 "constructInfo": {
@@ -111,7 +169,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672700170
+                    "expires": 1672701218
                   }
                 },
                 "constructInfo": {

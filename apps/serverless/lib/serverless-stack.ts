@@ -26,6 +26,9 @@ export class ServerlessStack extends cdk.Stack {
             expires: cdk.Expiration.after(cdk.Duration.days(365)),
           }
         }
+      },
+      logConfig: {
+        fieldLogLevel: appsync.FieldLogLevel.ALL
       }
     })
 
