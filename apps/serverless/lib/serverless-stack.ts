@@ -36,6 +36,7 @@ export class ServerlessStack extends cdk.Stack {
       code: lambda.Code.fromAsset("functions"),
       runtime: lambda.Runtime.NODEJS_14_X,
       handler: "listMeetings.handler",
+      memorySize: 1024,
       environment: {
         MEETINGS_TABLE: meetingsTable.tableName,
       },

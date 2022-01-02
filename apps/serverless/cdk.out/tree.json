@@ -111,7 +111,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672637312
+                    "expires": 1672638222
                   }
                 },
                 "constructInfo": {
@@ -643,6 +643,7 @@
                       }
                     },
                     "handler": "listMeetings.handler",
+                    "memorySize": 1024,
                     "runtime": "nodejs14.x"
                   }
                 },

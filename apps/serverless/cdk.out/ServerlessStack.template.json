@@ -57,7 +57,7 @@
             "ApiId"
           ]
         },
-        "Expires": 1672637312
+        "Expires": 1672638222
       },
       "DependsOn": [
         "MyMeetingsApiSchema44AF75E6"
@@ -399,6 +399,7 @@
           }
         },
         "Handler": "listMeetings.handler",
+        "MemorySize": 1024,
         "Runtime": "nodejs14.x"
       },
       "DependsOn": [
