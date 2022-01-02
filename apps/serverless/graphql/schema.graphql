@@ -22,6 +22,7 @@ type Meeting {
 
 type Query {
     listMeetings: [Meeting]
+    getMeetingById(meetingId: ID!): Meeting
 }
 
 type Mutation {

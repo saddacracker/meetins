@@ -30,7 +30,7 @@ export class ServerlessStack extends cdk.Stack {
     })
 
     ////////////////////
-    // Query
+    // Query: All Meetings
     ////////////////////
     const listMeetingsLambda = new lambda.Function(this, "listMeetingsHandler", {
       code: lambda.Code.fromAsset("functions"),
@@ -53,6 +53,32 @@ export class ServerlessStack extends cdk.Stack {
     listMeetingsDataSource.createResolver({
       typeName: "Query",
       fieldName: "listMeetings"
+    })
+
+    ////////////////////
+    // Query: Meeting By ID
+    ////////////////////
+    const getMeetingByIdLambda = new lambda.Function(this, "getMeetingByIdHandler", {
+      code: lambda.Code.fromAsset("functions"),
+      runtime: lambda.Runtime.NODEJS_14_X,
+      handler: "getMeetingById.handler",
+      memorySize: 1024,
+      environment: {
+        MEETINGS_TABLE: meetingsTable.tableName,
+      },
+    })
+
+    meetingsTable.grantReadData(getMeetingByIdLambda);
+
+    const getMeetingByIdDataSource = api.addLambdaDataSource(
+      "getMeetingByIdDataSource", 
+      getMeetingByIdLambda,
+    )
+
+    // Query Resolver function
+    getMeetingByIdDataSource.createResolver({
+      typeName: "Query",
+      fieldName: "getMeetingById"
     })
 
 
