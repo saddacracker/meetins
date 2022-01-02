@@ -19,7 +19,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/meetins-ui-shared-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/meetins-ui-shared-e2e/**/*.js"]
       }
     }
   },

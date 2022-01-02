@@ -6,11 +6,13 @@ export default {
   title: 'MUserListItem',
 } as Meta;
 
-const Template: Story<MUserListItemProps> = (args) => <MUserListItem {...args} />;
+const Template: Story<MUserListItemProps> = (args) => (
+  <MUserListItem {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
   id: '69',
-  name: 'Johnny Scizz',
-  email: 'scissor@metimbers.com',
+  name: 'Fart Machine',
+  email: 'farting@home.today',
 };

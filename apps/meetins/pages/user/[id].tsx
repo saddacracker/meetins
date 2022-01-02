@@ -1,6 +1,7 @@
 import Alert from '@material-ui/lab/Alert';
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import { useOnline } from "@meetins/meetins/util-hooks";
 
 type Data = {
     id: string;
@@ -19,10 +20,15 @@ const fetcher = async (url: string) => {
 
 const UserPage = () => {
     const router = useRouter();
-    const { id, ...stuff } = router.query; // gets id and query params 
-    const result = useSWR(`/api/user/${id}`, fetcher);
+    const { id, ...stuff } = router.query;
+    const action = id ? fetcher : null
+    const result = useSWR(`/api/user/${id}`, action);
     const data: Data = result.data;
     const error: Error = result.error;
+    const online = useOnline();
+    
+    console.log(`online`, online)
+    
 
     if (error) {
         return <Alert severity="error">Loading failed: {error.message}</Alert>

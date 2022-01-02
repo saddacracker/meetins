@@ -1,0 +1,34 @@
+type Meeting {
+    id: ID!
+    name: String!
+    day: Int
+    slug: String
+    time: String
+    end_time: String
+    group: String
+    notes: String
+    updated: String
+    url: String
+    types: [String]
+    address: String
+    city: String
+    state: String
+    postal_code: String
+    country: String
+    approximate: Boolean
+    rating: Int
+    reviews: [String]
+}
+
+type Query {
+    listMeetings: [Meeting]
+}
+
+type Mutation {
+    createMeeting(meeting: MeetingInput!): Meeting
+}
+
+input MeetingInput {
+    id: ID!
+    name: String!
+}

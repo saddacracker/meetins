@@ -10,5 +10,5 @@ const Template: Story<MHeaderProps> = (args) => <MHeader {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: 'Sample Title',
+  title: 'Example Header',
 };
