@@ -29,6 +29,9 @@ export class ServerlessStack extends cdk.Stack {
       }
     })
 
+    ////////////////////
+    // Query
+    ////////////////////
     const listMeetingsLambda = new lambda.Function(this, "listMeetingsHandler", {
       code: lambda.Code.fromAsset("functions"),
       runtime: lambda.Runtime.NODEJS_14_X,
@@ -45,9 +48,36 @@ export class ServerlessStack extends cdk.Stack {
       listMeetingsLambda,
     )
 
+    // Query Resolver function
     listMeetingsDataSource.createResolver({
       typeName: "Query",
       fieldName: "listMeetings"
+    })
+
+
+    ////////////////////
+    // Mutation
+    ////////////////////
+    const createMeetingLambda = new lambda.Function(this, "createMeetingHandler", {
+      code: lambda.Code.fromAsset("functions"),
+      runtime: lambda.Runtime.NODEJS_14_X,
+      handler: "createMeeting.handler",
+      environment: {
+        MEETINGS_TABLE: meetingsTable.tableName,
+      },
+    });
+
+    meetingsTable.grantReadWriteData(createMeetingLambda);
+
+    const createMeetingDataSource = api.addLambdaDataSource(
+      "createMeetingDataSource", 
+      createMeetingLambda,
+    )
+
+    // Mutation Resolver function
+    createMeetingDataSource.createResolver({
+      typeName: "Mutation",
+      fieldName: "createMeeting"
     })
   }
 }
