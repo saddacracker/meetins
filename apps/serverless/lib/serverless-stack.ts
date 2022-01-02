@@ -34,7 +34,7 @@ export class ServerlessStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_14_X,
       handler: "listMeetings.handler",
       environment: {
-        BOOKS_TABLE: meetingsTable.tableName,
+        MEETINGS_TABLE: meetingsTable.tableName,
       },
     })
 

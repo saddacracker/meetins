@@ -111,7 +111,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672620021
+                    "expires": 1672622962
                   }
                 },
                 "constructInfo": {
@@ -436,7 +436,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3Bucket3B767B17"
+                        "Ref": "AssetParameters1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27eS3BucketFDB10290"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -449,7 +449,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3VersionKeyAF25A0E8"
+                                      "Ref": "AssetParameters1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27eS3VersionKey0A096AE0"
                                     }
                                   ]
                                 }
@@ -462,7 +462,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8S3VersionKeyAF25A0E8"
+                                      "Ref": "AssetParameters1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27eS3VersionKey0A096AE0"
                                     }
                                   ]
                                 }
@@ -480,7 +480,7 @@
                     },
                     "environment": {
                       "variables": {
-                        "BOOKS_TABLE": {
+                        "MEETINGS_TABLE": {
                           "Ref": "MeetingsTable00BD45B4"
                         }
                       }
@@ -504,13 +504,13 @@
             "id": "AssetParameters",
             "path": "ServerlessStack/AssetParameters",
             "children": {
-              "9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8": {
-                "id": "9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8",
-                "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8",
+              "1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e": {
+                "id": "1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e",
+                "path": "ServerlessStack/AssetParameters/1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/S3Bucket",
+                    "path": "ServerlessStack/AssetParameters/1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -518,7 +518,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/S3VersionKey",
+                    "path": "ServerlessStack/AssetParameters/1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -526,7 +526,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ServerlessStack/AssetParameters/9a72579fd339b6ce4a14dd5135c3a4a49d66c89da1467251910a83156003c3c8/ArtifactHash",
+                    "path": "ServerlessStack/AssetParameters/1a0098308cdc0554d66538eae50f249feae39c0b36dc75ece0c7252d2441b27e/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
