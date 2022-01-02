@@ -76,6 +76,24 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
+## GraphQL with Cloud Developer Kit, Serverless
+
+### AWS/GRAPHQL tutorial:
+https://egghead.io/lessons/graphql-connect-an-aws-lambda-data-source-to-an-appsync-graphql-api
+
+### CDK (Cloud Development Kit)
+#### NX implementation of CDK: 
+[NX CDK helper](https://www.npmjs.com/package/@otterdev/nx-cdk) 
+[CDK Docs](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
+
+- generate app inside NX:  
+  - `yarn nx g @otterdev/nx-cdk:app <cdk project name> --dry-run`
+- commands: 
+  - `yarn nx run [CDK APPNAME]:[bootstrap, synth, init, build, CDK_COMMANDS] --dry-run` 
+  - (@otterdev errors ?)
+    - cd into CDK project directory you created  
+    -  then run CDK commands in that directory 
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.

@@ -1,0 +1,98 @@
+{
+  "root": "apps/serverless",
+  "projectType": "application",
+  "targets": {
+    "list": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "list"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "synth": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "synth"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "build": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "synth",
+        "options": "-q"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "bootstrap": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "bootstrap"
+      }
+    },
+    "deploy": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "deploy"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "destroy": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "destroy"
+      }
+    },
+    "diff": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "diff"
+      }
+    },
+    "metadata": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "metadata"
+      }
+    },
+    "context": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "context"
+      }
+    },
+    "docs": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "docs"
+      }
+    },
+    "doctor": {
+      "executor": "@otterdev/nx-cdk:run",
+      "options": {
+        "outputPath": "dist/apps/serverless",
+        "command": "doctor"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/serverless"],
+      "options": {
+        "jestConfig": "apps/serverless/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["meetins"]
+}

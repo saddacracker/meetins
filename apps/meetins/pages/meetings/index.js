@@ -4,7 +4,9 @@ import {
     InMemoryCache,
     ApolloProvider
 } from "@apollo/client";
-import Typography from '@material-ui/core/Typography';
+import { MHeader } from '@meetins/meetins/ui-shared';
+import styles from "../../styles/meetings.module.css";
+import headerStyles from "../../styles/mheader.module.scss";
 
 const client = new ApolloClient({
   uri: 'http://localhost:3333/graphql',
@@ -13,8 +15,8 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <Typography component="h1" variant="h3">Add a Meeting</Typography>
-    <div className="flex">
+    <MHeader title="Meetings" styles={headerStyles.container}/>
+    <div className={styles.container}>
       <SetForm />
       <SetList />
     </div>
