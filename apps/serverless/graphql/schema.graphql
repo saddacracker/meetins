@@ -66,3 +66,7 @@ input UpdateMeetingInput {
     approximate: Boolean
     rating: Int
 }
+
+type Subscription {
+    onUpdateMeeting: Meeting @aws_subscribe(mutations: ["updateMeeting"])
+}
