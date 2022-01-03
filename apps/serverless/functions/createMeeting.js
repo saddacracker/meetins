@@ -1,4 +1,3 @@
-// const { AppSyncResolverHandler } = require("@aws-cdk/aws-lambda");
 const { DynamoDB } = require("aws-sdk");
 
 const documentClient = new DynamoDB.DocumentClient();
