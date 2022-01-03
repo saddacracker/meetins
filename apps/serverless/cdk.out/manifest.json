@@ -19,13 +19,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958",
-              "id": "0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958",
+              "path": "asset.2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+              "id": "2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
               "packaging": "zip",
-              "sourceHash": "0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958",
-              "s3BucketParameter": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3BucketE3227E3C",
-              "s3KeyParameter": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53",
-              "artifactHashParameter": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958ArtifactHash21494660"
+              "sourceHash": "2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+              "s3BucketParameter": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A",
+              "s3KeyParameter": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E",
+              "artifactHashParameter": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9ArtifactHash92D174B5"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
@@ -35,7 +35,46 @@
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d",
+              "id": "37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d",
+              "packaging": "zip",
+              "sourceHash": "37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d",
+              "s3BucketParameter": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3Bucket0BD0032B",
+              "s3KeyParameter": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3VersionKey2D10D19F",
+              "artifactHashParameter": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dArtifactHash573B1CD3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -61,7 +100,7 @@
             "data": "MeetingsTable00BD45B4",
             "trace": [
               "new Table (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:698:18)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:10:27)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:12:27)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -89,7 +128,7 @@
               "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
               "GraphqlApi.setupLogConfig (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:327:57)",
               "new GraphqlApi (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:246:23)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:18:17)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:20:17)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -115,7 +154,7 @@
             "data": "MyMeetingsApi25637FD5",
             "trace": [
               "new GraphqlApi (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:243:16)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:18:17)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:20:17)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -142,7 +181,7 @@
             "trace": [
               "Schema.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/schema.ts:52:21)",
               "new GraphqlApi (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:259:39)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:18:17)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:20:17)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -169,7 +208,7 @@
             "trace": [
               "GraphqlApi.createAPIKey (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:386:12)",
               "new GraphqlApi (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi.ts:265:34)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:18:17)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:20:17)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -199,7 +238,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:55:40)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:57:40)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -231,7 +270,7 @@
               "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:55:40)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:57:40)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -260,7 +299,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:55:40)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:57:40)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -287,7 +326,7 @@
             "trace": [
               "new Resolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/resolver.ts:71:21)",
               "LambdaDataSource.createResolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:80:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:61:28)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:63:28)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -317,7 +356,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:76:42)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:78:42)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -349,7 +388,7 @@
               "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:76:42)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:78:42)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -378,7 +417,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:76:42)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:78:42)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -405,7 +444,7 @@
             "trace": [
               "new Resolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/resolver.ts:71:21)",
               "LambdaDataSource.createResolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:80:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:82:30)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:84:30)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -435,7 +474,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:98:41)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:100:41)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -467,7 +506,7 @@
               "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:98:41)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:100:41)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -496,7 +535,7 @@
               "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:98:41)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:100:41)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -523,7 +562,125 @@
             "trace": [
               "new Resolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/resolver.ts:71:21)",
               "LambdaDataSource.createResolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:80:12)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:104:29)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:106:29)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyMeetingsApiupdateMeetingDataSourceServiceRole49F42924",
+            "trace": [
+              "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "new BaseDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:64:47)",
+              "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
+              "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
+              "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:133:41)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyMeetingsApiupdateMeetingDataSourceServiceRoleDefaultPolicy3B836406",
+            "trace": [
+              "new Policy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Function.addToPrincipalOrResource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
+              "NodejsFunction.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
+              "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
+              "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:133:41)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/MyMeetingsApi/updateMeetingDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyMeetingsApiupdateMeetingDataSourceBB5777D2",
+            "trace": [
+              "new BaseDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:67:15)",
+              "new BackedDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:103:5)",
+              "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:195:5)",
+              "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:133:41)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/MyMeetingsApi/updateMeetingDataSource/MutationupdateMeetingResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyMeetingsApiupdateMeetingDataSourceMutationupdateMeetingResolverFA66C9D4",
+            "trace": [
+              "new Resolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/resolver.ts:71:21)",
+              "LambdaDataSource.createResolver (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:80:12)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:139:29)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -550,7 +707,7 @@
             "trace": [
               "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -580,7 +737,7 @@
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Table.combinedGrant (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:542:29)",
               "Table.grantReadData (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:337:17)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:53:19)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:55:19)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -606,7 +763,7 @@
             "data": "listMeetingsHandler2971AA98",
             "trace": [
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -626,10 +783,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/S3Bucket": [
+        "/ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3BucketE3227E3C",
+            "data": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
@@ -638,7 +795,7 @@
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -658,10 +815,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/S3VersionKey": [
+        "/ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53",
+            "data": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
@@ -670,7 +827,7 @@
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -690,10 +847,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/ArtifactHash": [
+        "/ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958ArtifactHash21494660",
+            "data": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9ArtifactHash92D174B5",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
@@ -702,7 +859,106 @@
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:48:32)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:50:32)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3Bucket0BD0032B",
+            "trace": [
+              "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3VersionKey2D10D19F",
+            "trace": [
+              "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dArtifactHash573B1CD3",
+            "trace": [
+              "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -729,7 +985,7 @@
             "trace": [
               "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:69:34)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:71:34)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -759,7 +1015,7 @@
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Table.combinedGrant (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:542:29)",
               "Table.grantReadData (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:337:17)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:74:19)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:76:19)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -785,7 +1041,7 @@
             "data": "getMeetingByIdHandler01C448F2",
             "trace": [
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:69:34)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:71:34)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -812,7 +1068,7 @@
             "trace": [
               "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:91:33)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:93:33)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -842,7 +1098,7 @@
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Table.combinedGrant (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:542:29)",
               "Table.grantReadWriteData (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:368:17)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:96:19)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:98:19)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
@@ -868,7 +1124,92 @@
             "data": "createMeetingHandler1D3A3EB5",
             "trace": [
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
-              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:91:33)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:93:33)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/updateMeetingHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateMeetingHandlerServiceRole1A2509D4",
+            "trace": [
+              "new Role (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/updateMeetingHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateMeetingHandlerServiceRoleDefaultPolicy3BEBD922",
+            "trace": [
+              "new Policy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Table.combinedGrant (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:542:29)",
+              "Table.grantReadWriteData (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:368:17)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:131:19)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/ServerlessStack/updateMeetingHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateMeetingHandler5AE61427",
+            "trace": [
+              "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
+              "new NodejsFunction (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:117:33)",
               "Object.<anonymous> (/Users/john.cardwell/apps/meetins/apps/serverless/bin/serverless.ts:7:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/john.cardwell/apps/meetins/node_modules/ts-node/src/index.ts:1371:23)",

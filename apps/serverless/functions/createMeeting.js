@@ -30,5 +30,4 @@ exports.handler = async (event, context, callback) => {
         return null;
     }
 
-    return null;
 }

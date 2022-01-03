@@ -2,6 +2,8 @@ import * as cdk from '@aws-cdk/core';
 import * as appsync from '@aws-cdk/aws-appsync';
 import * as lambda from "@aws-cdk/aws-lambda";
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import * as nodeJsLambda from "@aws-cdk/aws-lambda-nodejs";
+import * as path from "path";
 export class ServerlessStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -105,5 +107,35 @@ export class ServerlessStack extends cdk.Stack {
       typeName: "Mutation",
       fieldName: "createMeeting"
     })
+
+
+    ////////////////////
+    // Mutation: Update
+    ////////////////////
+
+    // (uses entry vs handler)
+    // Note: Delete yarn.lock before running `cdk deploy` or this mofo will fail
+    const updateMeetingLambda = new nodeJsLambda.NodejsFunction(
+      this, 
+      "updateMeetingHandler", 
+      {
+        ...commonLambdaProps,
+        entry: path.join(__dirname, "../functions/updateMeeting.js"),
+      },
+    );
+
+    meetingsTable.grantReadWriteData(updateMeetingLambda);
+
+    const updateMeetingDataSource = api.addLambdaDataSource(
+      "updateMeetingDataSource", 
+      updateMeetingLambda,
+    );
+
+    // Mutation Resolver function
+    updateMeetingDataSource.createResolver({
+      typeName: "Mutation",
+      fieldName: "updateMeeting"
+    });
+    
   }
 }

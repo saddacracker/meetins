@@ -149,7 +149,7 @@
                         "ApiId"
                       ]
                     },
-                    "definition": "type Meeting {\n    id: ID\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings: [Meeting]\n    getMeetingById(meetingId: ID!): Meeting\n}\n\ntype Mutation {\n    createMeeting(meeting: MeetingInput!): Meeting\n}\n\ninput MeetingInput {\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}"
+                    "definition": "type Meeting {\n    id: ID\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings: [Meeting]\n    getMeetingById(meetingId: ID!): Meeting\n}\n\ntype Mutation {\n    createMeeting(meeting: MeetingInput!): Meeting\n    updateMeeting(meeting: UpdateMeetingInput!): Meeting\n}\n\ninput MeetingInput {\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}\n\ninput UpdateMeetingInput {\n    id: ID!\n    name: String\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}"
                   }
                 },
                 "constructInfo": {
@@ -169,7 +169,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672701218
+                    "expires": 1672708414
                   }
                 },
                 "constructInfo": {
@@ -647,6 +647,163 @@
                   "fqn": "@aws-cdk/aws-appsync.LambdaDataSource",
                   "version": "1.137.0"
                 }
+              },
+              "updateMeetingDataSource": {
+                "id": "updateMeetingDataSource",
+                "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "appsync.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.137.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "lambda:InvokeFunction",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "updateMeetingHandler5AE61427",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyMeetingsApiupdateMeetingDataSourceServiceRoleDefaultPolicy3B836406",
+                                "roles": [
+                                  {
+                                    "Ref": "MyMeetingsApiupdateMeetingDataSourceServiceRole49F42924"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.137.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.137.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AppSync::DataSource",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Fn::GetAtt": [
+                            "MyMeetingsApi25637FD5",
+                            "ApiId"
+                          ]
+                        },
+                        "name": "updateMeetingDataSource",
+                        "type": "AWS_LAMBDA",
+                        "lambdaConfig": {
+                          "lambdaFunctionArn": {
+                            "Fn::GetAtt": [
+                              "updateMeetingHandler5AE61427",
+                              "Arn"
+                            ]
+                          }
+                        },
+                        "serviceRoleArn": {
+                          "Fn::GetAtt": [
+                            "MyMeetingsApiupdateMeetingDataSourceServiceRole49F42924",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.CfnDataSource",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "MutationupdateMeetingResolver": {
+                    "id": "MutationupdateMeetingResolver",
+                    "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/MutationupdateMeetingResolver",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "ServerlessStack/MyMeetingsApi/updateMeetingDataSource/MutationupdateMeetingResolver/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AppSync::Resolver",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Fn::GetAtt": [
+                                "MyMeetingsApi25637FD5",
+                                "ApiId"
+                              ]
+                            },
+                            "fieldName": "updateMeeting",
+                            "typeName": "Mutation",
+                            "dataSourceName": "updateMeetingDataSource",
+                            "kind": "UNIT"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-appsync.CfnResolver",
+                          "version": "1.137.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.Resolver",
+                      "version": "1.137.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.LambdaDataSource",
+                  "version": "1.137.0"
+                }
               }
             },
             "constructInfo": {
@@ -808,7 +965,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3BucketE3227E3C"
+                        "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -821,7 +978,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -834,7 +991,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -880,13 +1037,13 @@
             "id": "AssetParameters",
             "path": "ServerlessStack/AssetParameters",
             "children": {
-              "0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958": {
-                "id": "0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958",
-                "path": "ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958",
+              "2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9": {
+                "id": "2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+                "path": "ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/S3Bucket",
+                    "path": "ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -894,7 +1051,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/S3VersionKey",
+                    "path": "ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -902,7 +1059,41 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ServerlessStack/AssetParameters/0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958/ArtifactHash",
+                    "path": "ServerlessStack/AssetParameters/2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.137.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.137.0"
+                }
+              },
+              "37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d": {
+                "id": "37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d",
+                "path": "ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "ServerlessStack/AssetParameters/37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44d/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -1038,7 +1229,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3BucketE3227E3C"
+                        "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -1051,7 +1242,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -1064,7 +1255,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -1228,7 +1419,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3BucketE3227E3C"
+                        "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -1241,7 +1432,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -1254,7 +1445,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters0aa69d6e3ef342ca0cd3ae6092293e5b15235961b078185b2a234fe30ed91958S3VersionKey6B1B6D53"
+                                      "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
                                     }
                                   ]
                                 }
@@ -1293,6 +1484,233 @@
             },
             "constructInfo": {
               "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.137.0"
+            }
+          },
+          "updateMeetingHandler": {
+            "id": "updateMeetingHandler",
+            "path": "ServerlessStack/updateMeetingHandler",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "ServerlessStack/updateMeetingHandler/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ServerlessStack/updateMeetingHandler/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "ServerlessStack/updateMeetingHandler/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "ServerlessStack/updateMeetingHandler/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:ConditionCheckItem",
+                                    "dynamodb:BatchWriteItem",
+                                    "dynamodb:PutItem",
+                                    "dynamodb:UpdateItem",
+                                    "dynamodb:DeleteItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "MeetingsTable00BD45B4",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "updateMeetingHandlerServiceRoleDefaultPolicy3BEBD922",
+                            "roles": [
+                              {
+                                "Ref": "updateMeetingHandlerServiceRole1A2509D4"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.137.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.137.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.137.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "ServerlessStack/updateMeetingHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "ServerlessStack/updateMeetingHandler/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.137.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "ServerlessStack/updateMeetingHandler/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "ServerlessStack/updateMeetingHandler/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.137.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.137.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.137.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "ServerlessStack/updateMeetingHandler/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3Bucket0BD0032B"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3VersionKey2D10D19F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3VersionKey2D10D19F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "updateMeetingHandlerServiceRole1A2509D4",
+                        "Arn"
+                      ]
+                    },
+                    "architectures": [
+                      "arm64"
+                    ],
+                    "environment": {
+                      "variables": {
+                        "MEETINGS_TABLE": {
+                          "Ref": "MeetingsTable00BD45B4"
+                        },
+                        "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+                      }
+                    },
+                    "handler": "index.handler",
+                    "memorySize": 1024,
+                    "runtime": "nodejs14.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.137.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda-nodejs.NodejsFunction",
               "version": "1.137.0"
             }
           },
