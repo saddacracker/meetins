@@ -19,13 +19,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
-              "id": "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
+              "path": "asset.48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb",
+              "id": "48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb",
               "packaging": "zip",
-              "sourceHash": "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
-              "s3BucketParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA",
-              "s3KeyParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C",
-              "artifactHashParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719ArtifactHashF5FFEAB2"
+              "sourceHash": "48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb",
+              "s3BucketParameter": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3Bucket0F2FBB51",
+              "s3KeyParameter": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9",
+              "artifactHashParameter": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbArtifactHashF6A9FA1A"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
@@ -783,10 +783,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3Bucket": [
+        "/ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA",
+            "data": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3Bucket0F2FBB51",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
@@ -815,10 +815,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3VersionKey": [
+        "/ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C",
+            "data": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
@@ -847,10 +847,10 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/ArtifactHash": [
+        "/ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719ArtifactHashF5FFEAB2",
+            "data": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbArtifactHashF6A9FA1A",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",

@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 });
 
 const LIST_ALL_MEETINGS = gql`
-  query ListMeetings {
-    listMeetings {
+  query ListMeetings($first: Int, $cursor: ID) {
+    listMeetings(first: $first, cursor: $cursor) {
       id
       name
       day
@@ -31,12 +31,13 @@ const LIST_ALL_MEETINGS = gql`
       time
       end_time
       address
+      city
     }
   }
 `
 
 export const MeetingsList = () => {
-  const { loading, error, data } = useQuery(LIST_ALL_MEETINGS);
+  const { loading, error, data } = useQuery(LIST_ALL_MEETINGS, { variables: { first: 10, cursor: "4jkl" }});
   const classes = useStyles();
 
   if (loading) return 'Loading...';
@@ -50,6 +51,7 @@ export const MeetingsList = () => {
             <TableCell>Name</TableCell>
             <TableCell align="right">Day</TableCell>
             <TableCell align="right">Start Time</TableCell>
+            <TableCell align="right">City</TableCell>
             <TableCell align="right">Star Rating</TableCell>
           </TableRow>
         </TableHead>
@@ -61,6 +63,7 @@ export const MeetingsList = () => {
               </TableCell>
               <TableCell align="right">{meeting.day}</TableCell>
               <TableCell align="right">{meeting.time}</TableCell>
+              <TableCell align="right">{meeting.city}</TableCell>
               <TableCell align="right">{meeting.rating}</TableCell>
             </TableRow>
           ))}

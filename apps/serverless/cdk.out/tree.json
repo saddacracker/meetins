@@ -149,7 +149,7 @@
                         "ApiId"
                       ]
                     },
-                    "definition": "type Meeting {\n    id: ID\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings: [Meeting]\n    getMeetingById(meetingId: ID!): Meeting\n}\n\ntype Mutation {\n    createMeeting(meeting: MeetingInput!): Meeting\n    updateMeeting(meeting: UpdateMeetingInput!): Meeting\n}\n\ninput MeetingInput {\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}\n\ninput UpdateMeetingInput {\n    id: ID!\n    name: String\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}\n\ntype Subscription {\n    onUpdateMeeting: Meeting @aws_subscribe(mutations: [\"updateMeeting\"])\n}"
+                    "definition": "type Meeting {\n    id: ID\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    updated: String\n    url: String\n    types: [String]\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n    reviews: [String]\n}\n\ntype Query {\n    listMeetings(first: Int, cursor: ID): [Meeting]\n    getMeetingById(meetingId: ID!): Meeting\n}\n\ntype Mutation {\n    createMeeting(meeting: MeetingInput!): Meeting\n    updateMeeting(meeting: UpdateMeetingInput!): Meeting\n}\n\ninput MeetingInput {\n    name: String!\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}\n\ninput UpdateMeetingInput {\n    id: ID!\n    name: String\n    day: Int\n    slug: String\n    time: String\n    end_time: String\n    group: String\n    notes: String\n    url: String\n    address: String\n    city: String\n    state: String\n    postal_code: String\n    country: String\n    approximate: Boolean\n    rating: Int\n}\n\ntype Subscription {\n    onUpdateMeeting: Meeting @aws_subscribe(mutations: [\"updateMeeting\"])\n}"
                   }
                 },
                 "constructInfo": {
@@ -169,7 +169,7 @@
                         "ApiId"
                       ]
                     },
-                    "expires": 1672782577
+                    "expires": 1672873960
                   }
                 },
                 "constructInfo": {
@@ -965,7 +965,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
+                        "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3Bucket0F2FBB51"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -978,7 +978,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }
@@ -991,7 +991,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }
@@ -1037,13 +1037,13 @@
             "id": "AssetParameters",
             "path": "ServerlessStack/AssetParameters",
             "children": {
-              "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719": {
-                "id": "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
-                "path": "ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
+              "48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb": {
+                "id": "48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb",
+                "path": "ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3Bucket",
+                    "path": "ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -1051,7 +1051,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3VersionKey",
+                    "path": "ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -1059,7 +1059,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/ArtifactHash",
+                    "path": "ServerlessStack/AssetParameters/48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acb/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.137.0"
@@ -1229,7 +1229,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
+                        "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3Bucket0F2FBB51"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -1242,7 +1242,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }
@@ -1255,7 +1255,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }
@@ -1419,7 +1419,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
+                        "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3Bucket0F2FBB51"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -1432,7 +1432,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }
@@ -1445,7 +1445,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
+                                      "Ref": "AssetParameters48f503d3b055fa23eee94a7c0094cce4e85e52d817891d03500de58f3b204acbS3VersionKeyF2DF09C9"
                                     }
                                   ]
                                 }

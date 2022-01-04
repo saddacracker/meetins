@@ -21,7 +21,7 @@ type Meeting {
 }
 
 type Query {
-    listMeetings: [Meeting]
+    listMeetings(first: Int, cursor: ID): [Meeting]
     getMeetingById(meetingId: ID!): Meeting
 }
 
