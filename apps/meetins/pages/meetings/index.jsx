@@ -1,0 +1,90 @@
+import React from 'react';
+import {
+    ApolloProvider,
+    gql,
+    useQuery
+} from "@apollo/client";
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+import { client } from '@meetins/data-access';
+import { MHeader } from '@meetins/meetins/ui-shared';
+
+import styles from "../../styles/meetings.module.css";
+import headerStyles from "../../styles/mheader.module.scss";
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
+
+const LIST_ALL_MEETINGS = gql`
+  query ListMeetings {
+    listMeetings {
+      id
+      name
+      day
+      updated
+      rating
+      reviews
+      notes
+      types
+      time
+      end_time
+      address
+    }
+  }
+`
+// @TODO: Move to app/meetings/components (sibling of pages)
+const Meetings = () => {
+  const { loading, error, data } = useQuery(LIST_ALL_MEETINGS);
+  const classes = useStyles();
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+
+  return (
+    <TableContainer component={Paper}>
+      <Table className={classes.table} size="small" aria-label="a dense table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Day</TableCell>
+            <TableCell align="right">Start Time</TableCell>
+            <TableCell align="right">Star Rating</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.listMeetings.map((meeting) => (
+            <TableRow key={meeting.id}>
+              <TableCell component="th" scope="row">
+                {meeting.name}
+              </TableCell>
+              <TableCell align="right">{meeting.day}</TableCell>
+              <TableCell align="right">{meeting.time}</TableCell>
+              <TableCell align="right">{meeting.rating}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
+const App = () => (
+  <ApolloProvider client={client}>
+    <MHeader title="Meetings" styles={headerStyles.container}/>
+    <div className={styles.container}>
+      <Meetings />
+    </div>
+  </ApolloProvider>
+);
+
+export default App;

@@ -1,5 +1,5 @@
 type Meeting {
-    id: ID!
+    id: ID
     name: String!
     day: Int
     slug: String
@@ -22,13 +22,51 @@ type Meeting {
 
 type Query {
     listMeetings: [Meeting]
+    getMeetingById(meetingId: ID!): Meeting
 }
 
 type Mutation {
     createMeeting(meeting: MeetingInput!): Meeting
+    updateMeeting(meeting: UpdateMeetingInput!): Meeting
 }
 
 input MeetingInput {
-    id: ID!
     name: String!
+    day: Int
+    slug: String
+    time: String
+    end_time: String
+    group: String
+    notes: String
+    url: String
+    address: String
+    city: String
+    state: String
+    postal_code: String
+    country: String
+    approximate: Boolean
+    rating: Int
+}
+
+input UpdateMeetingInput {
+    id: ID!
+    name: String
+    day: Int
+    slug: String
+    time: String
+    end_time: String
+    group: String
+    notes: String
+    url: String
+    address: String
+    city: String
+    state: String
+    postal_code: String
+    country: String
+    approximate: Boolean
+    rating: Int
+}
+
+type Subscription {
+    onUpdateMeeting: Meeting @aws_subscribe(mutations: ["updateMeeting"])
 }

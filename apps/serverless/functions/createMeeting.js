@@ -1,9 +1,8 @@
-// const { AppSyncResolverHandler } = require("@aws-cdk/aws-lambda");
 const { DynamoDB } = require("aws-sdk");
 
 const documentClient = new DynamoDB.DocumentClient();
 
-exports.handler = async (event) => {
+exports.handler = async (event, context, callback) => {
     const meeting = event.arguments.meeting;
 
     try {
@@ -15,7 +14,11 @@ exports.handler = async (event) => {
         await documentClient
             .put({
                 TableName: process.env.MEETINGS_TABLE,
-                Item: meeting,
+                Item: {
+                    id: context.awsRequestId, 
+                    updated: new Date().toISOString(),
+                    ...meeting
+                },
             })
             .promise();
         
@@ -26,5 +29,4 @@ exports.handler = async (event) => {
         return null;
     }
 
-    return null;
 }

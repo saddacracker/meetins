@@ -2,6 +2,8 @@ import * as cdk from '@aws-cdk/core';
 import * as appsync from '@aws-cdk/aws-appsync';
 import * as lambda from "@aws-cdk/aws-lambda";
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import * as nodeJsLambda from "@aws-cdk/aws-lambda-nodejs";
+import * as path from "path";
 export class ServerlessStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -26,19 +28,28 @@ export class ServerlessStack extends cdk.Stack {
             expires: cdk.Expiration.after(cdk.Duration.days(365)),
           }
         }
+      },
+      logConfig: {
+        fieldLogLevel: appsync.FieldLogLevel.ALL
       }
     })
 
-    ////////////////////
-    // Query
-    ////////////////////
-    const listMeetingsLambda = new lambda.Function(this, "listMeetingsHandler", {
+    const commonLambdaProps: Omit<lambda.FunctionProps, "handler"> = {
       code: lambda.Code.fromAsset("functions"),
       runtime: lambda.Runtime.NODEJS_14_X,
-      handler: "listMeetings.handler",
+      memorySize: 1024,
+      architecture: lambda.Architecture.ARM_64,
       environment: {
         MEETINGS_TABLE: meetingsTable.tableName,
       },
+    }
+
+    ////////////////////
+    // Query: All Meetings
+    ////////////////////
+    const listMeetingsLambda = new lambda.Function(this, "listMeetingsHandler", {
+      handler: "listMeetings.handler",
+      ...commonLambdaProps
     })
 
     meetingsTable.grantReadData(listMeetingsLambda);
@@ -54,17 +65,34 @@ export class ServerlessStack extends cdk.Stack {
       fieldName: "listMeetings"
     })
 
+    ////////////////////
+    // Query: Meeting By ID
+    ////////////////////
+    const getMeetingByIdLambda = new lambda.Function(this, "getMeetingByIdHandler", {
+      handler: "getMeetingById.handler",
+      ...commonLambdaProps
+    })
+
+    meetingsTable.grantReadData(getMeetingByIdLambda);
+
+    const getMeetingByIdDataSource = api.addLambdaDataSource(
+      "getMeetingByIdDataSource", 
+      getMeetingByIdLambda,
+    )
+
+    // Query Resolver function
+    getMeetingByIdDataSource.createResolver({
+      typeName: "Query",
+      fieldName: "getMeetingById"
+    })
+
 
     ////////////////////
     // Mutation
     ////////////////////
     const createMeetingLambda = new lambda.Function(this, "createMeetingHandler", {
-      code: lambda.Code.fromAsset("functions"),
-      runtime: lambda.Runtime.NODEJS_14_X,
       handler: "createMeeting.handler",
-      environment: {
-        MEETINGS_TABLE: meetingsTable.tableName,
-      },
+      ...commonLambdaProps
     });
 
     meetingsTable.grantReadWriteData(createMeetingLambda);
@@ -79,5 +107,35 @@ export class ServerlessStack extends cdk.Stack {
       typeName: "Mutation",
       fieldName: "createMeeting"
     })
+
+
+    ////////////////////
+    // Mutation: Update
+    ////////////////////
+
+    // (uses entry vs handler)
+    // Note: Delete yarn.lock before running `cdk deploy` or this mofo will fail
+    const updateMeetingLambda = new nodeJsLambda.NodejsFunction(
+      this, 
+      "updateMeetingHandler", 
+      {
+        ...commonLambdaProps,
+        entry: path.join(__dirname, "../functions/updateMeeting.js"),
+      },
+    );
+
+    meetingsTable.grantReadWriteData(updateMeetingLambda);
+
+    const updateMeetingDataSource = api.addLambdaDataSource(
+      "updateMeetingDataSource", 
+      updateMeetingLambda,
+    );
+
+    // Mutation Resolver function
+    updateMeetingDataSource.createResolver({
+      typeName: "Mutation",
+      fieldName: "updateMeeting"
+    });
+    
   }
 }
