@@ -94,6 +94,12 @@ https://egghead.io/lessons/graphql-connect-an-aws-lambda-data-source-to-an-appsy
     - cd into CDK project directory you created  
     -  then run CDK commands in that directory 
 
+
+#### Ensure ENV files are updated before putting in production: 
+- .env, env.json
+
+
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
