@@ -17,6 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
+// EXAMPLE: https://www.antstack.io/blog/graphql-pagination-with-apollo-v3-part-1/
 const LIST_ALL_MEETINGS = gql`
   query ListMeetings($first: Int, $cursor: ID) {
     listMeetings(first: $first, cursor: $cursor) {
