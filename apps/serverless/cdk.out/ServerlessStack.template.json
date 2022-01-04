@@ -100,7 +100,7 @@
             "ApiId"
           ]
         },
-        "Expires": 1672708868
+        "Expires": 1672782577
       },
       "DependsOn": [
         "MyMeetingsApiSchema44AF75E6"
@@ -594,7 +594,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
+            "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
           },
           "S3Key": {
             "Fn::Join": [
@@ -607,7 +607,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -620,7 +620,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -656,7 +656,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "ServerlessStack/listMeetingsHandler/Resource",
-        "aws:asset:path": "asset.2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+        "aws:asset:path": "asset.32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
         "aws:asset:is-bundled": false,
         "aws:asset:property": "Code"
       }
@@ -742,7 +742,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
+            "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
           },
           "S3Key": {
             "Fn::Join": [
@@ -755,7 +755,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -768,7 +768,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -804,7 +804,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "ServerlessStack/getMeetingByIdHandler/Resource",
-        "aws:asset:path": "asset.2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+        "aws:asset:path": "asset.32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
         "aws:asset:is-bundled": false,
         "aws:asset:property": "Code"
       }
@@ -894,7 +894,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A"
+            "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA"
           },
           "S3Key": {
             "Fn::Join": [
@@ -907,7 +907,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -920,7 +920,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E"
+                          "Ref": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C"
                         }
                       ]
                     }
@@ -956,7 +956,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "ServerlessStack/createMeetingHandler/Resource",
-        "aws:asset:path": "asset.2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9",
+        "aws:asset:path": "asset.32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
         "aws:asset:is-bundled": false,
         "aws:asset:property": "Code"
       }
@@ -1126,17 +1126,17 @@
     }
   },
   "Parameters": {
-    "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3Bucket49F4880A": {
+    "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA": {
       "Type": "String",
-      "Description": "S3 bucket for asset \"2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9\""
+      "Description": "S3 bucket for asset \"32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719\""
     },
-    "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9S3VersionKey7BDD2B5E": {
+    "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C": {
       "Type": "String",
-      "Description": "S3 key for asset version \"2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9\""
+      "Description": "S3 key for asset version \"32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719\""
     },
-    "AssetParameters2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9ArtifactHash92D174B5": {
+    "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719ArtifactHashF5FFEAB2": {
       "Type": "String",
-      "Description": "Artifact hash for asset \"2cf49b2a8eccdf4d3c8abd52df208aa6de69f241e7238472edc8a53367412fb9\""
+      "Description": "Artifact hash for asset \"32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719\""
     },
     "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3Bucket0BD0032B": {
       "Type": "String",
