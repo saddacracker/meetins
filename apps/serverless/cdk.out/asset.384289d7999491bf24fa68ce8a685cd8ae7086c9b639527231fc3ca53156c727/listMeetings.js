@@ -3,10 +3,11 @@ const { DynamoDB } = require("aws-sdk");
 const documentClient = new DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
-    const { city, state, postal_code, day } = event.arguments;
+    const { first, cursor } = event.arguments;
     
     console.log('-----------------');
-    console.log(`city`, city)
+    console.log(`first`, first)
+    console.log(`cursor`, cursor)
     console.log('-----------------');
 
     try {
@@ -19,7 +20,7 @@ exports.handler = async (event) => {
             .scan({ 
                 TableName: process.env.MEETINGS_TABLE,
                 FilterExpression : 'city = :city', 
-                ExpressionAttributeValues : {':city' : city}
+                ExpressionAttributeValues : {':city' : 'Everett'}
             })
             .promise();
 

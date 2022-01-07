@@ -43,6 +43,7 @@ export const MeetingsList = () => {
 
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
+  if (!data.listMeetings) return `No records found :(`
 
   return (
     <TableContainer component={Paper}>
