@@ -19,8 +19,8 @@ const useStyles = makeStyles({
 
 // EXAMPLE: https://www.antstack.io/blog/graphql-pagination-with-apollo-v3-part-1/
 const LIST_ALL_MEETINGS = gql`
-  query ListMeetings($first: Int, $cursor: ID) {
-    listMeetings(first: $first, cursor: $cursor) {
+query ListMeetings($city: String, $state: String, $postal_code: String, $day: Int) { 
+	listMeetings(city: $city, state: $state, postal_code: $postal_code, day: $day, ) { 
       id
       name
       day
@@ -38,7 +38,7 @@ const LIST_ALL_MEETINGS = gql`
 `
 
 export const MeetingsList = () => {
-  const { loading, error, data } = useQuery(LIST_ALL_MEETINGS, { variables: { first: 10, cursor: "4jkl" }});
+  const { loading, error, data } = useQuery(LIST_ALL_MEETINGS, { variables: { city: "Everett" }});
   const classes = useStyles();
 
   if (loading) return 'Loading...';
