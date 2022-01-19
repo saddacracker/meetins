@@ -17,10 +17,10 @@ Run `nx start` from root
 
 ### AWS CDK commands
 
-*run from the 'serverless' directory until I get that added in the root package.json*
+*must run from the `apps/serverless` directory until I get that added in the root package.json*
 
 1. `cd apps/serverless`
-2. `cdk <command>
+2. `cdk <command>`
 
 ### Stuff
 This project uses the meeting schema from the fine folks at [Code for Recovery](https://github.com/code4recovery/spec)
