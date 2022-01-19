@@ -19,19 +19,22 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
-              "id": "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
+              "path": "asset.67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797",
+              "id": "67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797",
               "packaging": "zip",
-              "sourceHash": "32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719",
-              "s3BucketParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA",
-              "s3KeyParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C",
-              "artifactHashParameter": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719ArtifactHashF5FFEAB2"
+              "sourceHash": "67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797",
+              "s3BucketParameter": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797S3Bucket84A61803",
+              "s3KeyParameter": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797S3VersionKey8875438C",
+              "artifactHashParameter": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797ArtifactHashDCF6FF1E"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:163:23)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -67,9 +70,12 @@
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:163:23)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -267,7 +273,7 @@
               "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Function.addToPrincipalOrResource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
-              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
+              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:194:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
               "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:57:40)",
@@ -385,7 +391,7 @@
               "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Function.addToPrincipalOrResource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
-              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
+              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:194:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
               "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:78:42)",
@@ -503,7 +509,7 @@
               "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Function.addToPrincipalOrResource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
-              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
+              "Function.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:194:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
               "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:100:41)",
@@ -621,7 +627,7 @@
               "Role.addToPrincipalPolicy (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
               "Function.addToPrincipal (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
               "Function.addToPrincipalOrResource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-iam/lib/grant.ts:48:26)",
-              "NodejsFunction.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:196:25)",
+              "NodejsFunction.grantInvoke (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:194:25)",
               "new LambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/data-source.ts:201:26)",
               "GraphqlApi.addLambdaDataSource (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-appsync/lib/graphqlapi-base.ts:106:12)",
               "new ServerlessStack (/Users/john.cardwell/apps/meetins/apps/serverless/lib/serverless-stack.ts:129:41)",
@@ -783,15 +789,18 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3Bucket": [
+        "/ServerlessStack/AssetParameters/67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3BucketEA66D9EA",
+            "data": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797S3Bucket84A61803",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -815,15 +824,18 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/S3VersionKey": [
+        "/ServerlessStack/AssetParameters/67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719S3VersionKeyCE89FD8C",
+            "data": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797S3VersionKey8875438C",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -847,15 +859,18 @@
             ]
           }
         ],
-        "/ServerlessStack/AssetParameters/32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719/ArtifactHash": [
+        "/ServerlessStack/AssetParameters/67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters32a993ec622667ab238786abb415c90fc3b3cb9ddde1935fb2fa1f260ad64719ArtifactHashF5FFEAB2",
+            "data": "AssetParameters67c8f1031987e2c5479bdf81e3e98eee28c401f9f3a803ddd54e8b283d3a1797ArtifactHashDCF6FF1E",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -885,9 +900,12 @@
             "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3Bucket0BD0032B",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -918,9 +936,12 @@
             "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dS3VersionKey2D10D19F",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
@@ -951,9 +972,12 @@
             "data": "AssetParameters37aa2ce16d74f8fc3c02e642146e1eb5a85d73a89a5ea808444d5b0c3cddf44dArtifactHash573B1CD3",
             "trace": [
               "new FileAssetParameters (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:146:16)",
               "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "ServerlessStack.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:53",
+              "withoutDeprecationWarnings (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:195:12)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:14)",
               "new Asset (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
               "AssetCode.bind (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
               "new Function (/Users/john.cardwell/apps/meetins/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",

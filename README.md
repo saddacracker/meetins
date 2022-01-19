@@ -22,7 +22,7 @@ Run `nx start` from root
 1. `cd apps/serverless`
 2. `cdk <command>`
 
-### Stuff
+### Credits
 This project uses the meeting schema from the fine folks at [Code for Recovery](https://github.com/code4recovery/spec)
 
 ---

@@ -21,7 +21,7 @@ type Meeting {
 }
 
 type Query {
-    listMeetings: [Meeting]
+    listMeetings(city: String, state: String, postal_code: String, day: Int): [Meeting]
     getMeetingById(meetingId: ID!): Meeting
 }
 
