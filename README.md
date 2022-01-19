@@ -13,6 +13,13 @@ Meetins' is a meeting locator to help you find and rate 'meetins' near you!
 
 ---
 
+### Start
+Run `nx build` from root
+
+### AWS CDK commands have to be run from the 'serverless' directory
+1. `cd apps/serverless`
+2. `cdk <command>
+
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
