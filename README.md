@@ -13,7 +13,7 @@ Users are authed through Auth0 for now
 - AWS Serverless stuff
 
 ### Start
-Run `nx start` from root
+Run `yarn start` from root
 
 ### AWS CDK commands
 
