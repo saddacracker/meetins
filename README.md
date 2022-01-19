@@ -15,7 +15,10 @@ Users are authed through Auth0 for now
 ### Start
 Run `nx start` from root
 
-### AWS CDK commands have to be run from the 'serverless' directory until I get that added in the root package.json
+### AWS CDK commands
+
+*run from the 'serverless' directory until I get that added in the root package.json*
+
 1. `cd apps/serverless`
 2. `cdk <command>
 
